@@ -11,9 +11,9 @@
 }
 
 .card {
-  background: rgba(18, 20, 18, 0.45);
+  background: hsl(120 5% 7% / 0.45);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid hsl(0 0% 100% / 0.08);
   box-shadow: var(--shadow-card);
   border-radius: var(--radius-md);
   padding: var(--space-md);
@@ -30,7 +30,7 @@
 
 .today {
   border-color: var(--color-primary-border);
-  background: rgba(18, 20, 18, 0.55);
+  background: hsl(120 5% 7% / 0.55);
 }
 
 .cardHeader {

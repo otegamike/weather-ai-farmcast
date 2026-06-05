@@ -2,16 +2,18 @@
   /* Surfaces */
   --color-surface: #121412;
   --color-surface-container: #1e201e;
-  --color-surface-elevated: #252823;
-  --color-border: #2a2e2a;
+  --color-surface-container-transparent: hsl(120 3% 12%/ 0.7);
+  --color-surface-elevated: hsl(96 7% 15% / 0.7);
+  --color-surface-elevated-solid: hsl(96 7% 15%);
+  --color-border: hsl(120 5% 37%);
   --color-border-hover: #3d4e22;
 
   /* Brand */
   --color-primary: #a1d494;
-  --color-primary-dim: rgba(161, 212, 148, 0.12);
-  --color-primary-border: rgba(161, 212, 148, 0.3);
+  --color-primary-dim: hsl(105 43% 71% / 0.12);
+  --color-primary-border: hsl(105 43% 71% / 0.3);
   --color-secondary: #f4bb92;
-  --color-secondary-dim: rgba(244, 187, 146, 0.12);
+  --color-secondary-dim: hsl(22 82% 76% / 0.12);
 
   /* Text */
   --color-text-primary: #e3e3df;
@@ -21,14 +23,14 @@
 
   /* Semantic */
   --color-good: #6baf6b;
-  --color-good-dim: rgba(107, 175, 107, 0.3);
-  --color-good-border: rgba(107, 175, 107, 0.3);
-  --color-caution: #d4a843;
-  --color-caution-dim: rgba(212, 168, 67, 0.3);
-  --color-caution-border: rgba(212, 168, 67, 0.3);
-  --color-warning: #c4603a;
-  --color-warning-dim: rgba(196, 96, 58, 0.3);
-  --color-warning-border: rgba(196, 96, 58, 0.3);
+  --color-good-dim: hsl(120 30% 35% / 0.5);
+  --color-good-border: hsl(120 30% 55% / 0.5);
+  --color-caution: hsl(42 63% 65%);
+  --color-caution-dim: hsl(42 63% 35% / 0.5);
+  --color-caution-border: hsl(42 63% 55% / 0.5);
+  --color-warning: hsl(17 54% 70%);
+  --color-warning-dim: hsl(17 53% 30% / 0.5);
+  --color-warning-border: hsl(17 53% 50% / 0.3);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -51,10 +53,10 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 1px 0 rgba(161, 212, 148, 0.06) inset,
-                 0 4px 24px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 1px 0 rgba(161, 212, 148, 0.1) inset,
-                       0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 1px 0 hsl(105 43% 71% / 0.06) inset,
+                 0 4px 24px hsl(0 0% 0% / 0.3);
+  --shadow-card-hover: 0 1px 0 hsl(105 43% 71% / 0.1) inset,
+                       0 8px 32px hsl(0 0% 0% / 0.4);
 
   /* Transitions */
   --transition-fast: 150ms ease;

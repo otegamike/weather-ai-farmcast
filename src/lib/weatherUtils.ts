@@ -88,38 +88,38 @@ export function getConditionGradient(code: string, isNight: boolean): string {
   const codeNum = parseInt(code, 10);
 
   if (isNight) {
-    return "linear-gradient(135deg, rgba(13,27,42,0.75) 0%, rgba(27,40,56,0.75) 50%, rgba(26,26,46,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(211 53% 11% / 0.75) 0%, hsl(210 35% 16% / 0.75) 50%, hsl(240 28% 14% / 0.75) 100%)";
   }
 
   if (codeNum >= 95) {
-    return "linear-gradient(135deg, rgba(45,27,27,0.75) 0%, rgba(74,42,42,0.75) 50%, rgba(61,30,30,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(0 25% 14% / 0.75) 0%, hsl(0 28% 23% / 0.75) 50%, hsl(0 34% 18% / 0.75) 100%)";
   }
 
   if (codeNum >= 71 && codeNum <= 86) {
-    return "linear-gradient(135deg, rgba(42,58,74,0.75) 0%, rgba(61,77,93,0.75) 50%, rgba(46,62,78,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(210 28% 23% / 0.75) 0%, hsl(210 21% 30% / 0.75) 50%, hsl(210 26% 24% / 0.75) 100%)";
   }
 
   if (codeNum >= 51 && codeNum <= 67) {
-    return "linear-gradient(135deg, rgba(42,58,42,0.75) 0%, rgba(61,77,61,0.75) 50%, rgba(46,62,46,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(120 16% 20% / 0.75) 0%, hsl(120 12% 27% / 0.75) 50%, hsl(120 15% 21% / 0.75) 100%)";
   }
 
   if (codeNum >= 45) {
-    return "linear-gradient(135deg, rgba(42,42,42,0.75) 0%, rgba(61,61,61,0.75) 50%, rgba(46,46,46,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(0 0% 16% / 0.75) 0%, hsl(0 0% 24% / 0.75) 50%, hsl(0 0% 18% / 0.75) 100%)";
   }
 
   if (codeNum >= 3) {
-    return "linear-gradient(135deg, rgba(42,58,42,0.75) 0%, rgba(61,77,61,0.75) 50%, rgba(46,62,46,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(120 16% 20% / 0.75) 0%, hsl(120 12% 27% / 0.75) 50%, hsl(120 15% 21% / 0.75) 100%)";
   }
 
   if (codeNum >= 2) {
-    return "linear-gradient(135deg, rgba(58,74,58,0.75) 0%, rgba(77,93,77,0.75) 50%, rgba(62,78,62,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(120 12% 26% / 0.75) 0%, hsl(120 9% 33% / 0.75) 50%, hsl(120 11% 27% / 0.75) 100%)";
   }
 
   if (codeNum >= 1) {
-    return "linear-gradient(135deg, rgba(65,61,30,0.75) 0%, rgba(45,90,39,0.75) 50%, rgba(101,61,30,0.75) 100%)";
+    return "linear-gradient(135deg, hsl(52 37% 19% / 0.75) 0%, hsl(108 40% 25% / 0.75) 50%, hsl(26 54% 26% / 0.75) 100%)";
   }
 
-  return "linear-gradient(135deg, rgba(65,61,30,0.75) 0%, rgba(45,90,39,0.75) 50%, rgba(101,61,30,0.75) 100%)";
+  return "linear-gradient(135deg, hsl(52 37% 19% / 0.75) 0%, hsl(108 40% 25% / 0.75) 50%, hsl(26 54% 26% / 0.75) 100%)";
 }
 
 export function isCurrentHour(isoTime: string): boolean {

@@ -1,9 +1,9 @@
 .skeleton {
   background: linear-gradient(
     90deg,
-    var(--color-surface-container) 25%,
+    var(--color-surface-container-transparent) 25%,
     var(--color-surface-elevated) 50%,
-    var(--color-surface-container) 75%
+    var(--color-surface-container-transparent) 75%
   );
   background-size: 200% auto;
   animation: shimmer 1.8s linear infinite;

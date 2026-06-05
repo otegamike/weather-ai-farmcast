@@ -53,7 +53,7 @@ export default function WelcomePage({ onLocationSelect, isExiting }: WelcomePage
         <div className={`${styles.stagger} ${styles.stagger1}`}>
           <div className={styles.badge}>
             <span className={styles.dot} />
-            <span>LIVE FIELD DATA</span>
+            <span>REALTIME DATA</span>
           </div>
         </div>
         <h1 className={`${styles.stagger} ${styles.stagger2} ${styles.headline}`}>

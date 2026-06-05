@@ -18,7 +18,7 @@
 
 .button:hover:not(:disabled) {
   transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(161, 212, 148, 0.4);
+  box-shadow: 0 0 25px hsl(105 43% 71% / 0.4);
 }
 
 .button:active:not(:disabled) {
