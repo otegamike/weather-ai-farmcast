@@ -44,7 +44,7 @@
 .icon {
   width: 64px;
   height: 64px;
-  filter: saturate(0.75);
+  filter: saturate(0.75) invert(80%);
 }
 
 .conditionLabel {
