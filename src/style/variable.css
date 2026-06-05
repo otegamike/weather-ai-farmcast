@@ -21,13 +21,13 @@
 
   /* Semantic */
   --color-good: #6baf6b;
-  --color-good-dim: rgba(107, 175, 107, 0.12);
+  --color-good-dim: rgba(107, 175, 107, 0.3);
   --color-good-border: rgba(107, 175, 107, 0.3);
   --color-caution: #d4a843;
-  --color-caution-dim: rgba(212, 168, 67, 0.12);
+  --color-caution-dim: rgba(212, 168, 67, 0.3);
   --color-caution-border: rgba(212, 168, 67, 0.3);
   --color-warning: #c4603a;
-  --color-warning-dim: rgba(196, 96, 58, 0.12);
+  --color-warning-dim: rgba(196, 96, 58, 0.3);
   --color-warning-border: rgba(196, 96, 58, 0.3);
 
   /* Typography */

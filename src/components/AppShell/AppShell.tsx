@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import WelcomePage from "@/components/welcome/WelcomePage";
 import DashboardPage from "@/components/dashboard/DashboardPage";
+import WelcomeVideo from "@/components/welcome/WelcomeVideo";
 import { useUnitPreference } from "@/hooks/useUnitPreference";
 import styles from "./AppShell.module.css";
 
@@ -38,6 +39,7 @@ export default function AppShell() {
 
   return (
     <div className={styles.shell}>
+      <WelcomeVideo />
       <div
         className={`${styles.view} ${view === "dashboard" || view === "transitioning" ? styles.hidden : ""}`}
       >

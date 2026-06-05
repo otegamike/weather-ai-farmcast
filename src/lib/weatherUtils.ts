@@ -88,38 +88,38 @@ export function getConditionGradient(code: string, isNight: boolean): string {
   const codeNum = parseInt(code, 10);
 
   if (isNight) {
-    return "linear-gradient(135deg, #0d1b2a 0%, #1b2838 50%, #1a1a2e 100%)";
+    return "linear-gradient(135deg, rgba(13,27,42,0.75) 0%, rgba(27,40,56,0.75) 50%, rgba(26,26,46,0.75) 100%)";
   }
 
   if (codeNum >= 95) {
-    return "linear-gradient(135deg, #2d1b1b 0%, #4a2a2a 50%, #3d1e1e 100%)";
+    return "linear-gradient(135deg, rgba(45,27,27,0.75) 0%, rgba(74,42,42,0.75) 50%, rgba(61,30,30,0.75) 100%)";
   }
 
   if (codeNum >= 71 && codeNum <= 86) {
-    return "linear-gradient(135deg, #2a3a4a 0%, #3d4d5d 50%, #2e3e4e 100%)";
+    return "linear-gradient(135deg, rgba(42,58,74,0.75) 0%, rgba(61,77,93,0.75) 50%, rgba(46,62,78,0.75) 100%)";
   }
 
   if (codeNum >= 51 && codeNum <= 67) {
-    return "linear-gradient(135deg, #2a3a2a 0%, #3d4d3d 50%, #2e3e2e 100%)";
+    return "linear-gradient(135deg, rgba(42,58,42,0.75) 0%, rgba(61,77,61,0.75) 50%, rgba(46,62,46,0.75) 100%)";
   }
 
   if (codeNum >= 45) {
-    return "linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 50%, #2e2e2e 100%)";
+    return "linear-gradient(135deg, rgba(42,42,42,0.75) 0%, rgba(61,61,61,0.75) 50%, rgba(46,46,46,0.75) 100%)";
   }
 
   if (codeNum >= 3) {
-    return "linear-gradient(135deg, #2a3a2a 0%, #3d4d3d 50%, #2e3e2e 100%)";
+    return "linear-gradient(135deg, rgba(42,58,42,0.75) 0%, rgba(61,77,61,0.75) 50%, rgba(46,62,46,0.75) 100%)";
   }
 
   if (codeNum >= 2) {
-    return "linear-gradient(135deg, #3a4a3a 0%, #4d5d4d 50%, #3e4e3e 100%)";
+    return "linear-gradient(135deg, rgba(58,74,58,0.75) 0%, rgba(77,93,77,0.75) 50%, rgba(62,78,62,0.75) 100%)";
   }
 
   if (codeNum >= 1) {
-    return "linear-gradient(135deg, #413d1e 0%, #2d5a27 50%, #653d1e 100%)";
+    return "linear-gradient(135deg, rgba(65,61,30,0.75) 0%, rgba(45,90,39,0.75) 50%, rgba(101,61,30,0.75) 100%)";
   }
 
-  return "linear-gradient(135deg, #413d1e 0%, #2d5a27 50%, #653d1e 100%)";
+  return "linear-gradient(135deg, rgba(65,61,30,0.75) 0%, rgba(45,90,39,0.75) 50%, rgba(101,61,30,0.75) 100%)";
 }
 
 export function isCurrentHour(isoTime: string): boolean {

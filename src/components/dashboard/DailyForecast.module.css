@@ -30,7 +30,7 @@
 
 .today {
   border-color: var(--color-primary-border);
-  background: var(--color-surface-elevated);
+  background: rgba(18, 20, 18, 0.55);
 }
 
 .cardHeader {

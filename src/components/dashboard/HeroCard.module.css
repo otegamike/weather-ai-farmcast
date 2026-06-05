@@ -1,7 +1,6 @@
 .card {
   border-radius: var(--radius-md);
   padding: var(--space-lg);
-  animation: gradientDrift 12s ease infinite alternate;
   animation: fadeIn 0.5s ease forwards, gradientDrift 12s ease infinite alternate;
   opacity: 0;
   display: flex;
@@ -9,6 +8,10 @@
   gap: var(--space-md);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-card);
 }
 
 @keyframes gradientDrift {
@@ -101,7 +104,7 @@
 }
 
 .weatherCloud::after {
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.53) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: cloudDrift 8s ease-in-out infinite;
 }
@@ -145,8 +148,8 @@
 }
 
 @keyframes cloudDrift {
-  0%, 100% { opacity: 0.3; transform: translateX(-10%); }
-  50% { opacity: 0.6; transform: translateX(10%); }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6;}
 }
 
 @keyframes fogRoll {

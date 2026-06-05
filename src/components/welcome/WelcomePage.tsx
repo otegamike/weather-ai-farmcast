@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback } from "react";
-import WelcomeVideo from "./WelcomeVideo";
 import SearchInput from "./SearchInput";
 import LocationButton from "./LocationButton";
 import { useGeolocation } from "@/hooks/useGeolocation";
@@ -50,7 +49,6 @@ export default function WelcomePage({ onLocationSelect, isExiting }: WelcomePage
       <div className={styles.headerLogo}>
         <Logo />
       </div>
-      <WelcomeVideo />
       <div className={styles.content}>
         <div className={`${styles.stagger} ${styles.stagger1}`}>
           <div className={styles.badge}>
