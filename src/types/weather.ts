@@ -10,12 +10,8 @@ export interface WeatherLocation {
 export interface CurrentWeather {
   time: string;
   temperature: number;
-  feels_like: number;
-  humidity: number;
   wind_speed: number;
   wind_direction: number;
-  wind_gust: number;
-  uv_index: number;
   condition_code: string;
   icon: string;
   icon_path: string;

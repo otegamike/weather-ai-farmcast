@@ -71,7 +71,8 @@ export function useFarmAlerts(data: WeatherResponse | null): FarmAlert[] {
     }
 
     if (current) {
-      if (current.humidity > 85 && current.temperature > 18) {
+      const nearestHour = hourly?.[0];
+      if (nearestHour && nearestHour.humidity > 85 && current.temperature > 18) {
         alerts.push({
           id: nextId(),
           icon: "bug_report",

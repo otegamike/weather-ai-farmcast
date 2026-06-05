@@ -8,10 +8,10 @@ export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const params = autoWeatherSchema.parse({
-      days: searchParams.get("days"),
-      units: searchParams.get("units"),
-      lang: searchParams.get("lang"),
-      ai: searchParams.get("ai"),
+      days: searchParams.get("days") || 3,
+      units: searchParams.get("units") || 'metric',
+      lang: searchParams.get("lang") || 'en',
+      ai: searchParams.get("ai") || true,
     });
 
     const requestParams = {

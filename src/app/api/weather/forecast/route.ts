@@ -9,8 +9,8 @@ export async function GET(req: NextRequest) {
     const params = forecastSchema.parse({
       lat: searchParams.get("lat"),
       lon: searchParams.get("lon"),
-      days: searchParams.get("days"),
-      units: searchParams.get("units"),
+      days: searchParams.get("days") || 7,
+      units: searchParams.get("units") || "metric",
     });
 
     console.log("\n[WeatherForecast] >>> Requesting /v1/daily with params:", JSON.stringify(params, null, 2));

@@ -10,10 +10,10 @@ export async function GET(req: NextRequest) {
     const params = searchWeatherSchema.parse({
       lat: searchParams.get("lat"),
       lon: searchParams.get("lon"),
-      days: searchParams.get("days"),
+      days: searchParams.get("days") || 3,
       units: searchParams.get("units") || "metric",
       lang: searchParams.get("lang") || "en",
-      ai: searchParams.get("ai"),
+      ai: searchParams.get("ai") || true,
     });
 
     console.log("\n[WeatherSearch] >>> Requesting /v1/weather with params:", JSON.stringify(params, null, 2));

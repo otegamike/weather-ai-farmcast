@@ -71,7 +71,7 @@ export default function FarmConditions({ data }: FarmConditionsProps) {
     });
   }
 
-  const pestHumidity = current.humidity;
+  const pestHumidity = hourly.length > 0 ? hourly[0].humidity : 0;
   const pestTemp = current.temperature;
   if (pestHumidity > 85 && pestTemp > 20) {
     cells.push({

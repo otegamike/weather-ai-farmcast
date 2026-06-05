@@ -69,12 +69,6 @@
   line-height: 1;
 }
 
-.feelsLike {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--color-text-secondary);
-}
-
 .right {
   display: flex;
   align-items: center;
@@ -85,65 +79,4 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
   width: 100%;
-}
-
-.bottomStrip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-.sunInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-xs);
-}
-
-.sunArcContainer {
-  width: 120px;
-  height: 30px;
-  overflow: visible;
-}
-
-.sunArcSvg {
-  width: 120px;
-  height: 30px;
-}
-
-.sunTimes {
-  display: flex;
-  gap: var(--space-lg);
-}
-
-.sunTimeItem {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--color-text-primary);
-}
-
-.sunTimeItem .material-symbols-outlined {
-  font-size: 16px;
-  color: var(--color-secondary);
-}
-
-.sunLabel {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 0.1em;
-  margin-left: var(--space-xs);
-}
-
-.dateText {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--color-text-secondary);
 }

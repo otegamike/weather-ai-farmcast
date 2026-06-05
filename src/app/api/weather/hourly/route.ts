@@ -9,8 +9,8 @@ export async function GET(req: NextRequest) {
     const params = hourlySchema.parse({
       lat: searchParams.get("lat"),
       lon: searchParams.get("lon"),
-      days: searchParams.get("days"),
-      units: searchParams.get("units"),
+      days: searchParams.get("days") || 1,
+      units: searchParams.get("units") || "metric",
     });
 
     console.log("\n[WeatherHourly] >>> Requesting /v1/hourly with params:", JSON.stringify(params, null, 2));
