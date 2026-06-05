@@ -1,0 +1,149 @@
+.card {
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  animation: gradientDrift 12s ease infinite alternate;
+  animation: fadeIn 0.5s ease forwards, gradientDrift 12s ease infinite alternate;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientDrift {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mainRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .mainRow {
+    flex-direction: row;
+  }
+  .left { flex: 0 0 55%; }
+  .right { flex: 1; }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  filter: saturate(0.75);
+}
+
+.conditionLabel {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tempRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.temp {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 10vw, 96px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.feelsLike {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.bottomStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.sunInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.sunArcContainer {
+  width: 120px;
+  height: 30px;
+  overflow: visible;
+}
+
+.sunArcSvg {
+  width: 120px;
+  height: 30px;
+}
+
+.sunTimes {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.sunTimeItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-primary);
+}
+
+.sunTimeItem .material-symbols-outlined {
+  font-size: 16px;
+  color: var(--color-secondary);
+}
+
+.sunLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+  margin-left: var(--space-xs);
+}
+
+.dateText {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}

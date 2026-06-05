@@ -1,0 +1,134 @@
+.form {
+  width: 100%;
+  position: relative;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.input {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  padding: 14px 0;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input:focus {
+  border-bottom-color: var(--color-primary);
+  box-shadow: 0 2px 0 0 rgba(161, 212, 148, 0.2);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-text-on-primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  z-index: 50;
+  list-style: none;
+  padding: var(--space-xs) 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.item:hover,
+.focused {
+  background: var(--color-primary-dim);
+}
+
+.itemLeft {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.itemName {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.itemAdmin {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.itemFlag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.itemCountry {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

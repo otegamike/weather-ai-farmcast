@@ -1,0 +1,134 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 var(--space-xs);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.sparklineLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+.sparklineLabel .material-symbols-outlined {
+  font-size: 14px;
+}
+
+.sparklineWrapper {
+  position: relative;
+  height: 50px;
+  margin-bottom: var(--space-sm);
+}
+
+.strip {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.strip::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-sm) 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card.current {
+  border-color: var(--color-primary);
+  background: var(--color-surface-elevated);
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.temp {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.currentTemp {
+  color: var(--color-primary);
+}
+
+.rainGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rainGroup .material-symbols-outlined {
+  font-size: 10px;
+  color: var(--color-caution);
+}
+
+.rainPct {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--color-caution);
+  font-weight: 500;
+}
+
+.barTrack {
+  width: 40px;
+  height: 3px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width var(--transition-base);
+}

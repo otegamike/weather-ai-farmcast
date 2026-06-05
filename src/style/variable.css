@@ -1,0 +1,63 @@
+:root {
+  /* Surfaces */
+  --color-surface: #121412;
+  --color-surface-container: #1e201e;
+  --color-surface-elevated: #252823;
+  --color-border: #2a2e2a;
+  --color-border-hover: #3d4e22;
+
+  /* Brand */
+  --color-primary: #a1d494;
+  --color-primary-dim: rgba(161, 212, 148, 0.12);
+  --color-primary-border: rgba(161, 212, 148, 0.3);
+  --color-secondary: #f4bb92;
+  --color-secondary-dim: rgba(244, 187, 146, 0.12);
+
+  /* Text */
+  --color-text-primary: #e3e3df;
+  --color-text-secondary: #8a9e72;
+  --color-text-muted: hsl(87 23% 50%);
+  --color-text-on-primary: #121412;
+
+  /* Semantic */
+  --color-good: #6baf6b;
+  --color-good-dim: rgba(107, 175, 107, 0.12);
+  --color-good-border: rgba(107, 175, 107, 0.3);
+  --color-caution: #d4a843;
+  --color-caution-dim: rgba(212, 168, 67, 0.12);
+  --color-caution-border: rgba(212, 168, 67, 0.3);
+  --color-warning: #c4603a;
+  --color-warning-dim: rgba(196, 96, 58, 0.12);
+  --color-warning-border: rgba(196, 96, 58, 0.3);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 0 rgba(161, 212, 148, 0.06) inset,
+                 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 1px 0 rgba(161, 212, 148, 0.1) inset,
+                       0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}

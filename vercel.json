@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "src/app/api/**": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+  "regions": ["iad1"]
+}
