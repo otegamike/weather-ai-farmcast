@@ -4,6 +4,8 @@ import type { HourlyWeather } from "@/types/weather";
 import { formatHour, formatTemp, isCurrentHour } from "@/lib/weatherUtils";
 import SparklineChart from "./SparklineChart";
 import styles from "./HourlyStrip.module.css";
+import { scrollIntoView } from "@/utils/scrollIntoview";
+import { useEffect } from "react";
 
 interface HourlyStripProps {
   hourly: HourlyWeather[];
@@ -12,6 +14,10 @@ interface HourlyStripProps {
 
 export default function HourlyStrip({ hourly, unit }: HourlyStripProps) {
   const next24 = hourly.slice(0, 24);
+  
+  useEffect(() => {
+    scrollIntoView('hourly_card_container','hourly_card_current');
+  }, [hourly]);
 
   return (
     <section className={styles.section}>
@@ -25,7 +31,7 @@ export default function HourlyStrip({ hourly, unit }: HourlyStripProps) {
       <div className={styles.sparklineWrapper}>
         <SparklineChart hourly={next24} width={1000} height={40} />
       </div>
-      <div className={styles.strip}>
+      <div className={styles.strip} id='hourly_card_container'>
         {next24.map((h, i) => (
           <HourlyCard key={h.time} hour={h} unit={unit} index={i} />
         ))}
@@ -47,6 +53,7 @@ function HourlyCard({ hour, unit, index }: { hour: HourlyWeather; unit: "metric"
     <div
       className={`${styles.card} ${current ? styles.current : ""}`}
       style={{ animationDelay: `${index * 20}ms` }}
+      id={current ? 'hourly_card_current' : `hourly_card_${index}`}
     >
       <span className={styles.time}>{index === 0 ? "Now" : formatHour(hour.time)}</span>
       <img src={hour.icon} alt="" className={styles.icon} />

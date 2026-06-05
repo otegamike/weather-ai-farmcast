@@ -9,10 +9,7 @@ export default function WelcomeVideo() {
   const handleCanPlay = useCallback(() => setLoaded(true), []);
 
   return (
-    <div
-      className={styles.wrapper}
-      style={{ backgroundImage: "url(/background-alt-img.jpeg)" }}
-    >
+    <div className={styles.wrapper}>
       <video
         className={`${styles.video} ${loaded ? styles.visible : ""}`}
         autoPlay

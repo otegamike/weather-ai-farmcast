@@ -3,8 +3,22 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
+  background:
+    url(/background-alt-img.jpeg) center / cover no-repeat,
+    radial-gradient(ellipse 120% 60% at 50% -10%, #dde8f0 0%, #b8cfe0 20%, transparent 55%),
+    radial-gradient(ellipse 80% 40% at 20% 0%,   #e8efe4 0%, transparent 50%),
+    radial-gradient(ellipse 60% 30% at 80% 5%,   #c8dce8 0%, transparent 45%),
+    linear-gradient(
+      180deg,
+      #b8ccd8 0%,
+      #c5d5bf 28%,
+      #c8d4a0 38%,
+      #8fb87a 48%,
+      #5a9455 58%,
+      #3d7a40 72%,
+      #2e6632 88%,
+      #2a5c2e 100%
+    );
 }
 
 .video {
