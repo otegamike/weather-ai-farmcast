@@ -16,11 +16,11 @@ export async function GET(req: NextRequest) {
       ai: searchParams.get("ai") || true,
     });
 
-    console.log("\n[WeatherSearch] >>> Requesting /v1/weather with params:", JSON.stringify(params, null, 2));
+    console.log("[WeatherSearch] requesting...");
 
     const { data } = await weatherClient.get<WeatherResponse>("/v1/weather", { params });
 
-    console.log("\n[WeatherSearch] <<< Response data:", JSON.stringify(data, null, 2));
+    console.log("[WeatherSearch] request successful");
 
     return NextResponse.json(data, {
       headers: {
@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("\n[WeatherSearch] !!! Error:", error);
+    console.error("[WeatherSearch] request failed:", error instanceof Error ? error.message : error);
     return handleApiError(error);
   }
 }

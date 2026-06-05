@@ -80,3 +80,91 @@
   gap: var(--space-md);
   width: 100%;
 }
+
+.mainRow {
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.weatherClear::after {
+  background: radial-gradient(ellipse at 50% 0%, rgba(244,187,146,0.08) 0%, transparent 60%);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.weatherCloud::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: cloudDrift 8s ease-in-out infinite;
+}
+
+.weatherFog::after {
+  background: rgba(255,255,255,0.03);
+  animation: fogRoll 6s ease-in-out infinite;
+}
+
+.weatherRain::after {
+  background-image: repeating-linear-gradient(
+    -15deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.04) 2px,
+    rgba(255,255,255,0.04) 4px
+  );
+  background-size: 200% 8px;
+  animation: rainFall 1.5s linear infinite;
+}
+
+.weatherSnow::after {
+  background-image:
+    radial-gradient(2px 2px at 10% 10%, rgba(255,255,255,0.1) 50%, transparent 50%),
+    radial-gradient(2px 2px at 30% 40%, rgba(255,255,255,0.08) 50%, transparent 50%),
+    radial-gradient(1px 1px at 50% 20%, rgba(255,255,255,0.06) 50%, transparent 50%),
+    radial-gradient(2px 2px at 70% 60%, rgba(255,255,255,0.08) 50%, transparent 50%),
+    radial-gradient(1px 1px at 90% 30%, rgba(255,255,255,0.06) 50%, transparent 50%);
+  background-size: 100% 60px;
+  animation: snowFall 3s linear infinite;
+}
+
+.weatherStorm::after {
+  background: rgba(255,255,255,0.03);
+  animation: stormFlash 0.5s steps(1) infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes cloudDrift {
+  0%, 100% { opacity: 0.3; transform: translateX(-10%); }
+  50% { opacity: 0.6; transform: translateX(10%); }
+}
+
+@keyframes fogRoll {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes rainFall {
+  from { background-position: 0% 0%; }
+  to { background-position: 0% 8px; }
+}
+
+@keyframes snowFall {
+  from { background-position: 0% 0%; }
+  to { background-position: 0% 60px; }
+}
+
+@keyframes stormFlash {
+  0%, 40%, 60%, 100% { opacity: 0; }
+  50% { opacity: 0.5; }
+}

@@ -22,14 +22,14 @@ export async function GET(req: NextRequest) {
       ai: params.ai,
     };
 
-    console.log("\n[WeatherAuto] >>> Requesting /v1/weather-geo with params:", JSON.stringify(requestParams, null, 2));
+    console.log("[WeatherAuto] requesting...");
 
     const { data } = await weatherClient.get<WeatherResponse>(
       "/v1/weather-geo",
       { params: requestParams },
     );
 
-    console.log("\n[WeatherAuto] <<< Response data:", JSON.stringify(data, null, 2));
+    console.log("[WeatherAuto] request successful");
 
     return NextResponse.json(data, {
       headers: {
@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("\n[WeatherAuto] !!! Error:", error);
+    console.error("[WeatherAuto] request failed:", error instanceof Error ? error.message : error);
     return handleApiError(error);
   }
 }

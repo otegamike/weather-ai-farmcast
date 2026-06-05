@@ -23,7 +23,7 @@ export function handleApiError(error: unknown): NextResponse {
     );
   }
 
-  console.error("[FarmCast API Error]", error);
+  console.error("[FarmCast] request failed:", error instanceof Error ? error.message : error);
 
   return NextResponse.json({ error: "Internal server error" }, { status: 500 });
 }

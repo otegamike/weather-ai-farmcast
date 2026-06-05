@@ -1,6 +1,6 @@
 .toggle {
   display: flex;
-  background: var(--color-surface-container);
+  background-color: hsl(120 3% 20%);
   border-radius: var(--radius-pill);
   padding: 2px;
 }

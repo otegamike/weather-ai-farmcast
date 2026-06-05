@@ -1,6 +1,6 @@
 "use client";
 
-import type { CurrentWeather, DailyWeather } from "@/types/weather";
+import type { CurrentWeather } from "@/types/weather";
 import StatCell from "@/components/ui/StatCell/StatCell";
 import {
   formatTemp,
@@ -15,15 +15,22 @@ function degToCompass(deg: number): string {
   return dirs[Math.round(deg / 22.5) % 16];
 }
 
+function getWeatherClass(code: string): string {
+  const n = parseInt(code, 10);
+  if (n >= 95) return "weatherStorm";
+  if (n >= 71) return "weatherSnow";
+  if (n >= 51) return "weatherRain";
+  if (n >= 45) return "weatherFog";
+  if (n >= 3)  return "weatherCloud";
+  return "weatherClear";
+}
+
 interface HeroCardProps {
   current: CurrentWeather;
-  daily: DailyWeather;
   unit: "metric" | "imperial";
 }
 
-export default function HeroCard({ current, daily, unit }: HeroCardProps) {
-  const now = new Date();
-
+export default function HeroCard({ current, unit }: HeroCardProps) {
   const gradient = getConditionGradient(current.condition_code, false);
 
   const statData = [
@@ -33,7 +40,7 @@ export default function HeroCard({ current, daily, unit }: HeroCardProps) {
 
   return (
     <div
-      className={styles.card}
+      className={`${styles.card} ${styles[getWeatherClass(current.condition_code)]}`}
       style={{ background: gradient, backgroundSize: "200% 200%" }}
     >
       <div className={styles.mainRow}>

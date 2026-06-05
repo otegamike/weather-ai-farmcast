@@ -94,7 +94,7 @@ export default function DashboardPage({
           <>
             <section className={styles.heroSection}>
               <div className={styles.heroCol}>
-                <HeroCard current={data.current} daily={data.daily[0]} unit={unit} />
+                <HeroCard current={data.current} unit={unit} />
               </div>
               <div className={styles.aiCol}>
                 <AIInsightPanel

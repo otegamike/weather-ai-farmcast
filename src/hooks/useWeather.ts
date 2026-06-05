@@ -58,9 +58,9 @@ export function useWeather(options: UseWeatherOptions): UseWeatherResult {
     try {
       let url: string;
       if (lat !== undefined && lon !== undefined) {
-        url = `/api/weather/search?lat=${lat}&lon=${lon}&units=${unit}&days=3&ai=true`;
+        url = `/api/weather/search?lat=${lat}&lon=${lon}&units=${unit}&days=3&ai=false`;
       } else {
-        url = `/api/weather?units=${unit}&days=3&ai=true`;
+        url = `/api/weather?units=${unit}&days=3&ai=false`;
       }
 
       const res = await fetch(url);

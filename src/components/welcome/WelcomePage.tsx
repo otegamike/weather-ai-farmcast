@@ -8,6 +8,7 @@ import { useGeolocation } from "@/hooks/useGeolocation";
 import { useWeatherSearch } from "@/hooks/useWeatherSearch";
 import type { Suggestion } from "@/hooks/useWeatherSearch";
 import styles from "./WelcomePage.module.css";
+import Logo from "../ui/LogoComponent/LogoComponent";
 
 interface WelcomePageProps {
   onLocationSelect: (lat: number, lon: number, name: string) => void;
@@ -46,6 +47,9 @@ export default function WelcomePage({ onLocationSelect, isExiting }: WelcomePage
 
   return (
     <div className={containerClass}>
+      <div className={styles.headerLogo}>
+        <Logo />
+      </div>
       <WelcomeVideo />
       <div className={styles.content}>
         <div className={`${styles.stagger} ${styles.stagger1}`}>

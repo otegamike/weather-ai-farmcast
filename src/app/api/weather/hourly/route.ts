@@ -13,11 +13,11 @@ export async function GET(req: NextRequest) {
       units: searchParams.get("units") || "metric",
     });
 
-    console.log("\n[WeatherHourly] >>> Requesting /v1/hourly with params:", JSON.stringify(params, null, 2));
+    console.log("[WeatherHourly] requesting...");
 
     const { data } = await weatherClient.get("/v1/hourly", { params });
 
-    console.log("\n[WeatherHourly] <<< Response data:", JSON.stringify(data, null, 2));
+    console.log("[WeatherHourly] request successful");
 
     return NextResponse.json(data, {
       headers: {
@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("\n[WeatherHourly] !!! Error:", error);
+    console.error("[WeatherHourly] request failed:", error instanceof Error ? error.message : error);
     return handleApiError(error);
   }
 }

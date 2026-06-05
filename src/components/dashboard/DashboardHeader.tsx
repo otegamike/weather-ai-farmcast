@@ -2,6 +2,7 @@
 
 import styles from "./DashboardHeader.module.css";
 import UnitToggle from "@/components/ui/UnitToggle/UnitToggle";
+import Logo from "@/components/ui/LogoComponent/LogoComponent";
 
 interface DashboardHeaderProps {
   locationName: string;
@@ -19,10 +20,7 @@ export default function DashboardHeader({
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        <span className={styles.wordmark}>
-          <span className={styles.wordmarkFarm}>Farm</span>
-          <span className={styles.wordmarkCast}>Cast</span>
-        </span>
+        <Logo />
       </div>
       <div className={styles.center}>
         <span className="material-symbols-outlined">location_on</span>
@@ -37,3 +35,5 @@ export default function DashboardHeader({
     </header>
   );
 }
+
+

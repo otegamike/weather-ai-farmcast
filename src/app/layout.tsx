@@ -30,6 +30,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "FarmCast — Farm Weather Intelligence",
   description: "Real-time weather intelligence for farmers and agronomists.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

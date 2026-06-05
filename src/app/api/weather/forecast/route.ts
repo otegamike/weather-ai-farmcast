@@ -13,11 +13,11 @@ export async function GET(req: NextRequest) {
       units: searchParams.get("units") || "metric",
     });
 
-    console.log("\n[WeatherForecast] >>> Requesting /v1/daily with params:", JSON.stringify(params, null, 2));
+    console.log("[WeatherForecast] requesting...");
 
     const { data } = await weatherClient.get("/v1/daily", { params });
 
-    console.log("\n[WeatherForecast] <<< Response data:", JSON.stringify(data, null, 2));
+    console.log("[WeatherForecast] request successful");
 
     return NextResponse.json(data, {
       headers: {
@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.error("\n[WeatherForecast] !!! Error:", error);
+    console.error("[WeatherForecast] request failed:", error instanceof Error ? error.message : error);
     return handleApiError(error);
   }
 }
