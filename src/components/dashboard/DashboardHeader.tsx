@@ -3,6 +3,7 @@
 import styles from "./DashboardHeader.module.css";
 import UnitToggle from "@/components/ui/UnitToggle/UnitToggle";
 import Logo from "@/components/ui/LogoComponent/LogoComponent";
+import { LocationIcon, SearchIcon } from "@/components/ui/icons";
 
 interface DashboardHeaderProps {
   locationName: string;
@@ -23,13 +24,13 @@ export default function DashboardHeader({
         <Logo />
       </div>
       <div className={styles.center}>
-        <span className="material-symbols-outlined">location_on</span>
+        <LocationIcon />
         <span className={styles.locationText}>{locationName}</span>
       </div>
       <div className={styles.right}>
         <UnitToggle unit={unit} onChange={onUnitChange} />
         <button className={styles.searchBtn} onClick={onSearchOpen} aria-label="Search location">
-          <span className="material-symbols-outlined">search</span>
+          <SearchIcon />
         </button>
       </div>
     </header>

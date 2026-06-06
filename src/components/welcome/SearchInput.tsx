@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useReducer, useRef, useCallback, type FormEvent } from "react";
 import type { Suggestion } from "@/hooks/useWeatherSearch";
+import SearchIcon from "@/components/ui/icons/SearchIcon";
 import styles from "./SearchInput.module.css";
 
 function getFlagEmoji(countryCode: string): string {
@@ -146,7 +147,7 @@ export default function SearchInput({
           {isLoading || isSearching ? (
             <span className={styles.spinner} />
           ) : (
-            <span className="material-symbols-outlined">search</span>
+            <SearchIcon />
           )}
         </button>
       </div>
